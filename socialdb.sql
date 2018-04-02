@@ -7,9 +7,6 @@ CREATE TABLE Users (
     Username varchar(255) not null,
     Password binary(60),
     Email varchar(255) not null,
-    Country varchar(40) not null,
-    Language varchar(40) not null,
-    CreatedAt DateTime,
     PRIMARY KEY (UserID)
     
 );

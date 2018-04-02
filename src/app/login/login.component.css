@@ -1,0 +1,39 @@
+#navBottom {
+  margin-top: -60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#bottomFooter {
+  height: 50px;
+  background-color: #142A32;
+}
+
+#topFooter {
+  background-color: #DFECFB;
+  height: 10px;
+}
+#jumbotron {
+  background-color: #F2F7FC;
+  margin-top: 54px;
+}
+
+html {
+  height: 100%;
+}
+#body {
+  background-color: #F2F7FC;
+}
+body {
+  min-height: 100%;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#bodyRow {
+  margin-right: 0px;
+  margin-left: 0px;
+}

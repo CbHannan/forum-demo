@@ -1,0 +1,38 @@
+#headline{
+  float:right;
+}
+#body {
+  background-color: #F2F7FC;
+}
+#jumbotron {
+  background-color: #F2F7FC;
+}
+#bodyRow {
+  position: relative;
+  min-height: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin-top: 54px;
+}
+#navBottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: -60px;
+}
+
+#bottomFooter {
+  height: 50px;
+  background-color: #142A32;
+}
+
+#topFooter {
+  background-color: #DFECFB;
+  height: 10px;
+}

@@ -1,0 +1,79 @@
+
+<div id="holder">
+  <div class="jumbotron" id="jumbotron">
+    <div *ngIf="!this.selectedCategory || this.selectedCategory == 'All'" class="container">
+      <h1 id="jText" class="display-3">All Posts</h1>
+
+    </div>
+    <div *ngIf="this.selectedCategory && this.selectedCategory != 'All'" class="container">
+      <h1 class="display-3">{{this.selectedCategory}}</h1>
+
+    </div>
+  </div>
+
+  <div class="row" id="body">
+
+
+    <div class="col-md-10">
+
+      <div class="container" id="bodyContainer">
+
+
+        <div class="media mb-1" id="postDisplay" *ngFor="let post of posts">
+          <div class="card-block " id="postCard">
+            <div *ngIf="post.thumbnail">
+              <img id="img" class="d-flex align-left mr-3" height="64" src="{{post.thumbnail}}" alt="Generic placeholder image">
+            </div>
+
+
+            <h4 id="postTitle" class="card-title mb-0"><a (click)="openPost(post.PostID)">{{post.Title}}</a></h4>
+            <div *ngIf="post.reply_count">
+              <p class="card-text">{{post.reply_count}} Replies</p>
+
+            </div>
+            <div *ngIf="!post.reply_count">
+              <p class="card-text">0 Replies</p>
+
+            </div>
+
+
+
+
+
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Posted by <strong>{{post.PosterUsername}}</strong></small>
+            <small id="timestamp" class="text-muted"><time>Posted <strong>{{post.timestamp | amTimeAgo}}</strong></time></small>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+    <div class="col-md-2">
+      <div class="list-group">
+        <button id="catList" class="list-group-item list-group-item-action" *ngFor="let category of categories" [class.selected]="category === selectedCategory" (click)="loadPostsByCategory(category.CategoryName)">
+          {{category.CategoryName}}
+
+
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid" id="navBottom">
+  <div class="navbar-bottom">
+    <div id="topFooter" class="row">
+
+    </div>
+    <div id="bottomFooter" class="row">
+
+    </div>
+  </div>
+</div>

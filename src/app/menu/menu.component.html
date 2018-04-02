@@ -1,0 +1,45 @@
+<nav class="navbar navbar-light navbar-fixed-top" id="navbar">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-8">
+        <a class="navbar-brand text-white" href="#">Forum</a>
+
+        <div class="navbar-nav">
+          <a class="nav-item nav-link text-white" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link text-white" [routerLink]="['createpost']">Create Post</a>
+          <a class="nav-item nav-link text-white" *ngIf="this.isLoggedIn" [routerLink]="['profile']">My Profile</a>
+          <a class="nav-item nav-link text-white" *ngIf="!this.isLoggedIn" [routerLink]="['register']">Register</a>
+          <a class="nav-item nav-link text-white" *ngIf="this.isAdmin" [routerLink]="['admin']">Admin</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="navbar-nav">
+          <a id="logout" class="nav-item nav-link text-white float-sm-right" *ngIf="this.isLoggedIn" (click)="logout()">Logout</a>
+        </div>
+
+        <div *ngIf="!this.isLoggedIn">
+          <form name="form-inline" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+            <div class="form-group row mb-0" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+              <div class="col-md-5 col-sm-0">
+
+                <input type="text" placeholder="Username" id="inlineFormInput" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+              </div>
+              <div class="col-md-5 col-sm-0">
+
+                <input type="password" placeholder="Password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+              </div>
+              <div class="col-md-2">
+
+                <button [disabled]="loading" class="btn btn-primary">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</nav>
+<div class="alert alert-danger" *ngIf="this.incorrectPass" style="text-align:left;">Password does not match Username<span style="float:right;"><a [routerLink]="['reset']" (click)="this.incorrectPass = false"><strong>Reset Password</strong></a></span></div>
+

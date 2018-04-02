@@ -1,0 +1,79 @@
+
+/* Set black background color, white text and some padding */
+
+
+#postTitle {
+  cursor: pointer;
+}
+
+#postRC {
+  float: right;
+}
+
+
+#postTitle:hover {
+  text-decoration: underline;
+}
+
+#postDisplay {
+  background-color: #F2F7FC;
+  border-color: #142A32;
+}
+
+#img {
+  float: left;
+}
+html, body {
+  height: 100%;
+}
+
+#body {
+  max-width: 100%;
+  padding-bottom:60px;
+}
+#bodyContainer {
+  overflow: auto;
+}
+#topFooter {
+  background-color: #DFECFB;
+  height: 10px;
+}
+#timestamp{
+  float:right;
+}
+#jumbotron {
+  background-color: #DFECFB;
+}
+#catList:hover {
+  background-color: #DFECFB;
+}
+
+#jText,#postTitle,#catList {
+  color: #142A32;
+}
+#footer {
+  position: sticky
+}
+#bottomFooter {
+  height: 50px;
+  background-color: #142A32;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+button {
+  outline: none;
+}
+#holder {
+  margin-top:54px;
+  min-height: 100%;
+}
+#navBottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: -60px;
+}

@@ -1,0 +1,79 @@
+<div class="jumbotron" id="jumbotron">
+  <div class="container">
+    <h1 class="display-3">My Profile</h1>
+
+  </div>
+</div>
+
+<body>
+  <div class="container-fluid p-3">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="card-block" id="body">
+
+          <h2>My Posts</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>PostID</th>
+                  <th>Title</th>
+                  <th>Body</th>
+                  <th>Posted</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let post of posts">
+                <tr>
+                  <td>{{post.PostID}}</td>               
+                  <td>{{post.Title}}</td>
+                  <td>{{post.Content}}</td>
+                  <td>{{post.timestamp | amTimeAgo}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>My Replies</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ReplyID</th>
+                  <th>PostID</th>
+                  <th>Body</th>
+                  <th>Posted</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let reply of replies">
+                <tr>
+                  <td>{{reply.ReplyID}}</td>
+                  <td>{{reply.PostID}}</td>
+                  <td>{{reply.Content}}</td>
+                  <td>{{reply.timestamp | amTimeAgo}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card" id="userInfo">
+          <div class="card-block" *ngFor="let user of user">
+            <div class="card-title"><strong>Username: </strong>{{user.Username}}</div>
+            <div class="card-title"><strong>Email: </strong>{{user.Email}}</div>
+            <div class="card-title"><strong>Created: </strong>{{user.created | amTimeAgo}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<div class="container-fluid" id="footer">
+  <div class="navbar-bottom">
+    <div id="topFooter" class="row">
+
+    </div>
+    <div id="bottomFooter" class="row">
+
+    </div>
+  </div>
+</div>

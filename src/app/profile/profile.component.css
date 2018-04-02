@@ -1,0 +1,26 @@
+#userInfo {
+  background-color: #F2F7FC;
+}
+#jumbotron {
+  background-color: #F2F7FC;
+  margin-top: 54px;
+}
+table {
+  background-color: #F2F7FC;
+}
+#footer {
+  margin-top: -60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#bottomFooter {
+  height: 50px;
+  background-color: #142A32;
+}
+
+#topFooter {
+  background-color: #DFECFB;
+  height: 10px;
+}

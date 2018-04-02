@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var posts = require('./routes/Posts');
 var users = require('./routes/Users');
+var categories = require('./routes/Categories');
+
 var app = express();
 var cors = require('cors');
 // view engine setup
@@ -27,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 So now, you can use http://localhost:5000/resources/myImage.jpg to serve all the images instead of http://localhost:5000/images/myImage.jpg. */
 app.use('/Api/posts',posts);
 app.use('/Api/users',users);
+app.use('/Api/categories',categories);
 
 
 app.get('*', (req, res) => {

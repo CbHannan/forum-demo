@@ -1,0 +1,83 @@
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#jumbotron {
+  background-color: #F2F7FC;
+}
+#editDelete{
+  float: right;
+}
+#img {
+  float: left;
+}
+#timestamp {
+  float: right;
+}
+
+#bodyRow {
+  max-width: 100%;
+}
+#body {
+  background-color: #F2F7FC;
+}
+
+#report {
+  float: right;
+  cursor: pointer;
+}
+#reportReply {
+  float:right;
+  cursor:pointer;
+  margin-top: 0px;
+}
+#report:hover {
+    text-decoration: underline;
+}
+#reportReply:hover {
+  text-decoration: underline;
+}
+#bodyRow {
+  padding-bottom:60px;
+  overflow:auto;
+  height:100%;
+}
+#holder {
+  margin-top: 54px;
+  min-height: 100%;
+  position: relative;
+}
+#topFooter {
+  height: 10px;
+  background-color: #eceeef; 
+}
+#pageFooter{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  margin-top: -60px;
+}
+#bottomFooter {
+  height: 50px;
+  background-color: #142A32;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#footer{
+ position:sticky
+}
+#bodyCont{
+}
+body, html{
+ height:100%;
+}
+
+

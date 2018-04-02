@@ -1,0 +1,13 @@
+#logout {
+  cursor: pointer;
+}
+
+#logout:hover {
+  text-decoration: underline;
+}
+#navbar{
+  background-color:#142A32;
+  margin-bottom:-50px;
+  height: 54px;
+
+}
